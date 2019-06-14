@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TODO list</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <p>Вы уверены что хотите удалить "{{ object }}"?</p>
+    <input type="submit" value="Confirm">
+</form>
+</body>
+</html>

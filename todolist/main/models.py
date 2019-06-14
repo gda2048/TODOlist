@@ -9,3 +9,6 @@ class Card(models.Model):
     name = models.CharField('Название', max_length=50)
     description = models.TextField('Описание', max_length=500)
     is_archived = models.BooleanField('Архивировано', default=False)
+
+    def __str__(self):
+        return str(self.name)

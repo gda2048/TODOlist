@@ -16,7 +16,8 @@
   <div>
     <input type="checkbox" id="{{ card.id }}" name="checks" value="{{ card.id }}">
     <label for="{{ card.id }}">
-        {{card.name}}
+        {{card.name}} <a href="{% url 'card-delete' pk=card.id %}">Удалить</a>
+        <a href="{% url 'card-update' pk=card.id %}">Обновить</a>
         <br>
         <div>{{card.description}}</div>
     </label>
@@ -38,7 +39,9 @@
   <div>
     <input type="checkbox" id="{{ card.id }}" name="checks" value="{{ card.id }}">
     <label for="{{ card.id }}">
-        {{card.name}}
+        {{card.name}} <a href="{% url 'card-delete' pk=card.id %}">Удалить</a>
+        <a href="{% url 'card-update' pk=card.id %}">Обновить</a>
+
         <br>
         <div>{{card.description}}</div>
 
