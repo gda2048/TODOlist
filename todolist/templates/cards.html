@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TODO list</title>
+</head>
+<body>
+<h1>TODO list</h1>
+<a href="{% url 'card-add' %}">Добавить задание</a>
+<br>
+<form action="{% url 'card-archive' %}" method="post">
+{% csrf_token %}
+<fieldset>
+  <legend>Отметьте сделанные задачи</legend>
+    {% for card in list %}
+  <div>
+    <input type="checkbox" id="{{ card.id }}" name="checks" value="{{ card.id }}">
+    <label for="{{ card.id }}">
+        {{card.name}}
+        <br>
+        <div>{{card.description}}</div>
+    </label>
+  </div>
+        <br>
+    {% empty %}
+    Нет задач
+    {% endfor %}
+    <br>
+    <button type="submit">Архивировать</button>
+</fieldset>
+</form>
+<br>
+<form action="{% url 'card-return' %}" method="post">
+{% csrf_token %}
+<fieldset >
+  <legend>Вернуть задание в список</legend>
+    {% for card in list_arch %}
+  <div>
+    <input type="checkbox" id="{{ card.id }}" name="checks" value="{{ card.id }}">
+    <label for="{{ card.id }}">
+        {{card.name}}
+        <br>
+        <div>{{card.description}}</div>
+
+    </label>
+  </div>
+        <br>
+    {% empty %}
+    Нет задач
+    {% endfor %}
+    <br>
+    <button type="submit">Вернуть</button>
+</fieldset>
+</form>
+</body>
+</html>
