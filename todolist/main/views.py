@@ -30,7 +30,6 @@ def card_list(request):
 
 
 def card_return(request):
-    print(1)
     if request.method == 'POST':
         Card.objects.filter(id__in=[int(i) for i in request.POST.getlist('checks')]).update(is_archived=False)
     return redirect("/")
@@ -38,5 +37,5 @@ def card_return(request):
 
 def card_archive(request):
     if request.method == 'POST':
-        Card.objects.filter(id__in=[int(i) for i in request.POST.getlist('checks') ]).update(is_archived=True)
+        Card.objects.filter(id__in=[int(i) for i in request.POST.getlist('checks')]).update(is_archived=True)
     return redirect("/")
