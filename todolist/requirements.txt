@@ -4,7 +4,7 @@ chardet==3.0.4
 colorama==0.3.7
 compizconfig-python==0.9.13.1
 distlib==0.2.6
-Django==1.11.22
+Django==1.11.23
 django-rest-auth==0.9.5
 djangorestframework==3.9.4
 django-tables2==1.14.2
