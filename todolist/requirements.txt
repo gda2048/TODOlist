@@ -6,7 +6,7 @@ compizconfig-python==0.9.13.1
 distlib==0.2.6
 Django==1.11.22
 django-rest-auth==0.9.5
-djangorestframework==3.9.4
+djangorestframework==3.11.2
 django-tables2==1.14.2
 dnspython==1.15.0
 gyp==0.1
