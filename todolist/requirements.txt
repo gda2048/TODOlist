@@ -12,7 +12,7 @@ dnspython==1.15.0
 gyp==0.1
 html5lib==0.999999999
 idna==2.8
-lxml==4.2.1
+lxml==4.9.1
 numpy==1.16.3
 psutil==5.4.2
 psycopg2==2.7.4
